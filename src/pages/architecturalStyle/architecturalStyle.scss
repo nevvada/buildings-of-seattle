@@ -1,0 +1,21 @@
+.architectural-style-page {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  height: 100vh !important;
+}
+
+.center-line {
+  height: 100%;
+  left: 50%;
+  position: absolute;
+  top: 100%;
+  width: 5px;
+}
+
+.title {
+  display: flex;
+  flex-direction: column;
+  height: 20%;
+  justify-content: center;
+  margin: 50px;
+}

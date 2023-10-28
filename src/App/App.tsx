@@ -1,27 +1,23 @@
 import React from 'react';
-import {
-  Route,
-  RouterProvider,
-  createBrowserRouter,
-  createRoutesFromElements,
-} from 'react-router-dom';
 
-import Federalism from '../pages/federalism/Federalism';
 import Home from '../pages/home/Home';
+import ArchitecturalStyle from '../pages/architecturalStyle/ArchitecturalStyle';
+
+import { architecturalStyles } from '../data/architecturalStyles';
 
 import './app.scss';
 
-const routes = createRoutesFromElements(
-  <Route path="/">
-    <Route index element={<Home />} />
-    <Route path="federalism" element={<Federalism />} />
-  </Route>
-)
-
-const router = createBrowserRouter(routes);
+function renderArchitecturalStyles() {
+  return architecturalStyles.map((styleData) => (
+    <ArchitecturalStyle key={styleData.id} {...styleData} />
+  ));
+}
 
 export default function App() {
   return (
-    <RouterProvider router={router} />
+    <main>
+      <Home />
+      {renderArchitecturalStyles()}
+    </main>
   )
 }

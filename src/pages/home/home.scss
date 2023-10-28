@@ -1,0 +1,16 @@
+#home-page {
+  font-family: 'Times New Roman' serif;
+  background-color: #c0c0c0;
+  width: 100dvw;
+  height: 100dvh;
+}
+
+#home-center-line {
+  position: absolute;
+  left: 50%;
+  top: 50vh;
+  width: 5px;
+  height: 50vh;
+  background-color: black;
+  z-index: 1;
+}
